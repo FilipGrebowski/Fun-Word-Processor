@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fun Word Processor</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="commands.js"></script>
+
+</head>
+<body>
+
+<h1>Fun and Simple Word Processor</h1>
+
+<textarea name="mytextarea" id="mytextarea" placeholder="Enter text here..."></textarea><br />
+
+<div class="buttons">
+    <form name="myform">
+        <button type="button" value="Bold" class="blue" onclick="bold();">Bold</button>
+        <button type="button" value="Italic" class="red" onclick="italic();">Italic</button>
+        <button type="button" value="Underline" class="green" onclick="underline();">Underline</button>
+
+        <div class="dropdown">
+            <button class="dropbutton" disabled>Pick a Colour</button>
+
+            <div class="dropdown-content">
+                <p onclick="changeGreen();">Green</p>
+                <p onclick="changeBlue();">Blue</p>
+                <p onclick="changeRed();">Red</p>
+                <p onclick="changeYellow();">Yellow</p>
+            </div>
+
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbutton" disabled>Pick a Font</button>
+
+            <div class="dropdown-content">
+                <p onclick="changeCursive();">Cursive</p>
+                <p onclick="changeFantasy();">Fantasy</p>
+                <p onclick="changeSerif();">Serif</p>
+                <p onclick="changeSansSerif();">Sans-Serif</p>
+            </div>
+
+        </div>
+
+        <div>
+            <input type="number" id="Red" placeholder="Red" oninput="correctRed()">
+            <input type="number" id="Green" placeholder="Green" oninput="correctGreen()">
+            <input type="number" id="Blue" placeholder="Blue" oninput="correctBlue()">
+
+            <div>
+                <button type="button" class="set" onclick="setColor(), reset()">Set Color</button>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
